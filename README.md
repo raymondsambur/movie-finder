@@ -1,71 +1,107 @@
-# Movie Finder
+# 🎬 Movie Match - Automated Testing Suite
 
-A web application to search, discover, and manage your favorite movies.
+A comprehensive testing suite for the Movie Match application, featuring both UI and API automation using Playwright. This project demonstrates end-to-end testing capabilities for a movie search application with user authentication and search history features.
 
-## Features
+## 📖 About the Project
 
-- 🔍 Search movies by title
-- ⭐ View ratings and reviews
-- 📝 Save favorites to a personal list
-- 🎬 Browse popular and trending movies
-- 📱 Responsive design
+Movie Match is a movie search application that allows users to discover movies through various search methods including direct movie names, descriptive queries, genres, and release years. This repository contains automated tests covering both the user interface and API functionality to ensure reliability and performance.
 
-## Installation
+## 🚀 Features Tested
+
+- **Authentication System** - Login/logout functionality with credential validation
+- **Movie Search** - Multiple search methods including name, genre, description, and year
+- **Search History** - History tracking and clearing capabilities
+- **Session Management** - User session persistence and validation
+
+## 🛠️ Prerequisites
+
+Before running the tests, ensure you have the following installed:
+
+- Node.js (version 14 or higher)
+- npm or yarn package manager
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/movie-finder.git
-cd movie-finder
+git clone [your-repository-url]
+cd movie-match-testing
 npm install
 ```
 
-## Running the Project
+Install Playwright browsers:
 
 ```bash
-npm start
+npx playwright install
 ```
 
-The application will run on [http://localhost:3000](http://localhost:3000).
+## ▶️ Running Tests
 
-## Testing
-
-### Running Tests
+### Run All Tests
 
 ```bash
-npm test
+npx playwright test
 ```
 
-### Viewing Test Reports
+### Run Tests in Headed Mode
 
-Test reports are generated in the `coverage/` directory. Open `coverage/index.html` in your browser to view detailed coverage reports.
+```bash
+npx playwright test --headed
+```
 
-### Test Cases
+### Run Specific Test File
 
-- **Search Functionality**: Validates movie search by title
-- **Ratings Display**: Verifies correct rating and review rendering
-- **Favorites Management**: Tests adding/removing movies from favorites
-- **Trending Movies**: Confirms trending movies fetch and display
-- **Responsive Design**: Tests layout across different screen sizes
-- **API Integration**: Validates Movie API calls and error handling
+```bash
+npx playwright test [test-file-name]
+```
 
-## Technologies
+### Run Tests in UI Mode
 
-- React
-- Node.js
-- [Movie API](https://www.themoviedb.org/settings/api)
+```bash
+npx playwright test --ui
+```
 
-## Future Improvements
+### Run Tests in Debug Mode
 
-- Advanced filtering by genre, year, and rating
-- User authentication and personalized recommendations
-- Movie watchlist with status tracking
-- Integration with streaming platforms
-- Dark mode support
-- Multi-language support
+```bash
+npx playwright test --debug
+```
 
-## Contributing
+## 📊 View Test Reports
 
-Contributions are welcome! Please open an issue or submit a pull request.
+After running tests, generate and view the HTML report:
 
-## License
+```bash
+npx playwright show-report
+```
 
-MIT License
+## 🧪 Test Coverage
+
+### UI Tests
+
+- User authentication flows
+- Search functionality across different methods
+- History management
+- Session validation
+
+### API Tests
+
+- Direct movie name queries
+- Descriptive movie searches
+- Genre-based filtering
+- Release year searches
+
+## 📁 Project Structure
+
+```bash
+movie-match-testing/
+├── tests/
+│   ├── ui/
+│   │   └── [UI test files]
+│   └── api/
+│       └── [API test files]
+├── playwright.config.js
+├── package.json
+└── README.md
+```
